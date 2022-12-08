@@ -1,13 +1,13 @@
-import RootStyleRegistry from './RootStyleRegistry';
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
+import RootStyleRegistry from '../lib/RootStyleRegistry';
+import Foot from './footer';
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <head />
-      <RootStyleRegistry>{children}</RootStyleRegistry>
+    <html>
+      <body>
+        <RootStyleRegistry>{children}</RootStyleRegistry>
+        <Foot />
+      </body>
     </html>
   );
 }

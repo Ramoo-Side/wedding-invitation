@@ -1,21 +1,30 @@
-import React from 'react';
-import styles from '../styles/Home.module.css';
-import { StyleWrapper } from '../styles/layout.styled';
-/*
- TODO https://nextjs.org/blog/next-13
- TODO https://beta.nextjs.org/docs/routing/pages-and-layouts
- TODO https://velog.io/@wmc1415/Nextjs13-1
- */
+'use client';
 
-const Home = () => {
+import styled from 'styled-components';
+
+export default function Page() {
   return (
-    <StyleWrapper>
-      <main className={styles.main}>
-        <div>123</div>
-      </main>
-      <footer>설정버튼</footer>
-    </StyleWrapper>
+    <>
+      <StyleWrapper>
+        <StyleTitleWrapper>
+          <h1>타이틀</h1>
+          <StyleP>이름</StyleP>
+        </StyleTitleWrapper>
+        <div>사진</div>
+      </StyleWrapper>
+    </>
   );
-};
+}
 
-export default Home;
+const StyleP = styled.p`
+  font-size: 50px;
+`;
+
+const StyleWrapper = styled.div`
+  max-width: 720px;
+  margin: 0 auto;
+`;
+
+const StyleTitleWrapper = styled.div`
+  border: 1px solid #455560;
+`;
