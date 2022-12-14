@@ -8,6 +8,7 @@ import styled from 'styled-components';
 
 export default function Page() {
   const defaultImgUrl = '/default-wedding.png';
+  const default2ndImgUrl = '/couple7.png';
 
   useZoomHooks();
 
@@ -24,9 +25,75 @@ export default function Page() {
         <StyleGreeting>
           <Greeting />
         </StyleGreeting>
-        {/* <div>작은 가로 사진</div> */}
-        {/* <div>누구의 아들 누구</div> */}
-        {/* <div>누구의 딸 누구</div> */}
+        <StylePhoto2ndWrapper>
+          <StylePhoto2nd src={default2ndImgUrl} alt="2nd img" />
+        </StylePhoto2ndWrapper>
+        <div style={{ lineHeight: 2 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', padding: `0 11rem` }}>
+            <div
+              style={{
+                fontSize: 22,
+                letterSpacing: `0.3125rem`,
+                color: '#333333',
+                fontWeight: 500,
+              }}
+            >{`${'김철용 • 박덕자'}`}</div>
+            <div
+              style={{
+                fontWeight: 'bold',
+                color: 'rgb(138, 133, 127)',
+                display: 'flex',
+                alignItems: 'center',
+                letterSpacing: '3px',
+                justifyContent: 'space-around',
+                width: '100px',
+              }}
+            >
+              <span>의</span>
+              <span style={{ display: 'inline-block', minWidth: '2rem', textAlign: 'center' }}>
+                아들
+              </span>
+            </div>
+            <div style={{ fontSize: 22, letterSpacing: `0.3125rem`, color: '#333333' }}>
+              {`${'철수'}`}
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <img src="/phone.png" alt="call" style={{ width: 22, marginLeft: 15 }} />
+            </div>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', padding: `0 11rem` }}>
+            <div
+              style={{
+                fontSize: 22,
+                letterSpacing: `0.3125rem`,
+                color: '#333333',
+                fontWeight: 500,
+              }}
+            >{`${'김덕춘 • 박미숙'}`}</div>
+            <div
+              style={{
+                fontWeight: 'bold',
+                color: 'rgb(138, 133, 127)',
+                display: 'flex',
+                alignItems: 'center',
+                letterSpacing: '3px',
+                justifyContent: 'space-around',
+                width: '100px',
+              }}
+            >
+              <span>의</span>
+              <span style={{ display: 'inline-block', minWidth: '2rem', textAlign: 'center' }}>
+                딸
+              </span>
+            </div>
+            <div style={{ fontSize: 22, letterSpacing: `0.3125rem`, color: '#333333' }}>
+              {`${'영희'}`}
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <img src="/phone.png" alt="call" style={{ width: 22, marginLeft: 15 }} />
+            </div>
+          </div>
+        </div>
         {/* <div>혼주 연락처 버튼 모달</div> */}
         {/* <div>날짜 달력</div> */}
         {/* <div>가로 캐러우쉘 갤러리</div> */}
@@ -71,11 +138,24 @@ const StylePhotoWrapper = styled.div`
   height: 28.125rem;
   background-image: url(${(props) => props.url});
   background-size: cover;
-  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
   position: relative;
   margin-top: -1.5625rem;
 `;
 
 const StyleGreeting = styled.div`
   padding-top: 6.25rem;
+`;
+
+const StylePhoto2ndWrapper = styled.div`
+  width: 25rem;
+  border-bottom: 2px solid #f1965f;
+  margin: 2.5rem auto;
+  display: flex;
+  justify-content: center;
+`;
+
+const StylePhoto2nd = styled.img`
+  width: 18.75rem;
+  padding-bottom: 2.5rem;
 `;
