@@ -36,5 +36,5 @@ export const StyleTitle = styled.div`
   vertical-align: top;
   padding: 2.125rem 1rem 3.125rem;
   text-align: center;
-  border: 3px solid #e1bda7;
+  border: 3px solid #f1965fad;
 `;
