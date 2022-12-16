@@ -53,3 +53,8 @@ export const StylePhoto2nd = styled.img`
   width: 18.75rem;
   padding-bottom: 2.5rem;
 `;
+
+export const StyleCallButtonWrapper = styled.div(() => ({
+  padding: 40,
+  marginTop: 20,
+}));
