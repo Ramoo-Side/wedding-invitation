@@ -5,9 +5,11 @@ import Date from '#/components/date/Date';
 import Greeting from '#/components/greeting/Greeting';
 import MemberInfo from '#/components/memberInfo/MemberInfo';
 import Title from '#/components/title/Title';
+import Calendar from '#/components/calendar/Calendar';
 import useZoomHooks from '#/hooks/useZoomHooks';
 import styled from 'styled-components';
 import {
+  StyleCalendarWrapper,
   StyleCallButtonWrapper,
   StyleContentWrapper,
   StyleDateWrapper,
@@ -45,6 +47,9 @@ export default function Page() {
           <Call />
         </StyleCallButtonWrapper>
         {/* <div>날짜 달력</div> */}
+        <StyleCalendarWrapper>
+          <Calendar />
+        </StyleCalendarWrapper>
         {/* <div>가로 캐러우쉘 갤러리</div> */}
         {/* <div>오시는길 지도</div> */}
         {/* <div>코로나 인사말</div> */}
