@@ -2,16 +2,17 @@ import styled from 'styled-components';
 
 export const StyleMemberInfoWrapper = styled.div(() => ({
   lineHeight: 2,
+  width: `25rem`,
+  margin: `2.5rem auto`,
 }));
 
 export const StyleGroomWrapper = styled.div(() => ({
   display: 'flex',
   justifyContent: 'space-between',
-  padding: `0 11rem`,
 }));
 
 export const StyleGroomParents = styled.div(() => ({
-  fontSize: 22,
+  fontSize: `1.375rem`,
   letterSpacing: `0.3125rem`,
   color: '#333333',
   fontWeight: 500,
@@ -34,7 +35,7 @@ export const StyleGroomMiddleSpan = styled.span(() => ({
 }));
 
 export const StyleGroomName = styled.div(() => ({
-  fontSize: 22,
+  fontSize: `1.375rem`,
   letterSpacing: `0.3125rem`,
   color: '#333333',
 }));
@@ -46,7 +47,7 @@ export const StyleCallWrapper = styled.div(() => ({
 }));
 
 export const StyleCallIcon = styled.img(() => ({
-  width: 22,
+  width: `1.375rem`,
   marginLeft: 15,
   cursor: 'pointer',
 }));

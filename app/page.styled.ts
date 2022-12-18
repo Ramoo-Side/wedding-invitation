@@ -61,6 +61,9 @@ export const StyleCallButtonWrapper = styled.div(() => ({
 
 export const StyleCalendarWrapper = styled.div(() => ({
   margin: '100px auto',
-  display: 'flex',
-  justifyContent: 'center',
+  // display: 'flex',
+}));
+
+export const StyleGalleryWrapper = styled.div(() => ({
+  margin: `100px auto`,
 }));

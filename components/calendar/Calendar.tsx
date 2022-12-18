@@ -1,42 +1,39 @@
 'use client';
 
 import dayjs from 'dayjs';
-import { useState } from 'react';
-import ReactCalendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import styled from 'styled-components';
+import {
+  StyleCalendar,
+  StyleDate,
+  StyleRemainDate,
+  StyleRemainText,
+  StyleRemainWrapper,
+  StyleTime,
+} from './Calendar.styled';
 
 const Calendar = () => {
-  const selectedDate = dayjs(new Date(2022, 3, 9));
-  // console.log(selectedDate.format('YYYY년 MM월 DD일'));
+  const selectedDate = dayjs(new Date(2022, 3, 9)).format('MM월 DD일');
+  const 남은날짜 = Math.floor(dayjs(new Date(2022, 3, 9)).diff(dayjs(), 'day', true));
   return (
     <>
+      <StyleDate>{selectedDate}</StyleDate>
+      <StyleTime>{'토요일 오후 6시'}</StyleTime>
       <StyleCalendar
         calendarType="US"
-        value={new Date(2022, 3, 9)}
+        locale="en-us"
         showNavigation={false}
         showNeighboringMonth={false}
+        value={new Date(2022, 3, 9)}
         formatDay={(locale, date) => dayjs(date).format('D')}
-        locale="en-us"
+        tileClassName={({ date, view }) => (date.getDay() === 6 ? 'saturday' : null)}
       />
+      <StyleRemainWrapper>
+        <StyleRemainText>결혼식이</StyleRemainText>
+        <StyleRemainDate>{Math.abs(남은날짜)}일</StyleRemainDate>
+        <StyleRemainText>{남은날짜 > 0 ? `남았습니다.` : `지났습니다.`}</StyleRemainText>
+      </StyleRemainWrapper>
     </>
   );
 };
 
 export default Calendar;
-
-const StyleCalendar = styled(ReactCalendar)`
-  &.react-calendar {
-    width: 100%;
-    border: none;
-    border-top: 1px solid #f1965f;
-    border-bottom: 1px solid #f1965f;
-    padding: 50px 0;
-    font-size: 24px;
-    pointer-events: none;
-
-    .react-calendar__month-view__weekdays {
-      display: none !important;
-    }
-  }
-`;
