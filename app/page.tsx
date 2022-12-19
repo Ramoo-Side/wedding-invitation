@@ -51,7 +51,6 @@ export default function Page() {
         <StyleCalendarWrapper>
           <Calendar />
         </StyleCalendarWrapper>
-        {/* <div>가로 캐러우쉘 갤러리</div> */}
         <StyleGalleryWrapper>
           <Gallery />
         </StyleGalleryWrapper>

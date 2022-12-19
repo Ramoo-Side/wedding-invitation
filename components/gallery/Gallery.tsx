@@ -1,6 +1,5 @@
-import { useMemo } from 'react';
 import styled from 'styled-components';
-import Slider, { Settings } from 'react-slick';
+import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -26,42 +25,30 @@ const imgList = [
   },
 ];
 
-interface sliderProps {
-  /** 커스텀 클래스 */
-  className?: string;
-  /** 자동재생 (속도 설정시 number 타입으로) */
-  autoplay?: boolean | number;
-  /** 슬라이더 속도 */
-  speed?: number;
-  /** 반복 여부 */
-  loop?: boolean;
-}
+function Gallery() {
+  const settings = {
+    dots: true,
+    fade: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    customPaging: function (idx: number) {
+      return (
+        <a>
+          <img
+            src={`brideAndGroom/bride-and-groom${idx + 1}.jpg`}
+            style={{ height: 50, width: 50 }}
+          />
+        </a>
+      );
+    },
+  };
 
-function Gallery({ className, autoplay = true, speed = 300, loop = true }: sliderProps) {
-  const settings = useMemo<Settings>(
-    () => ({
-      dots: true,
-      fade: true,
-      infinite: loop,
-      speed: speed,
-      slidesToShow: 1,
-      autoplay: Boolean(autoplay),
-      autoplaySpeed: typeof autoplay === 'boolean' ? 3000 : autoplay,
-      // customPaging: function (i) {
-      //   return (
-      //     <a>
-      //       <img
-      //         src={`brideAndGroom/bride-and-groom${i + 1}.jpg`}
-      //         style={{ height: 50, width: 50 }}
-      //       />
-      //     </a>
-      //   );
-      // },
-    }),
-    [autoplay, loop, speed]
-  );
   return (
-    <StyleSlideWrapper className={className}>
+    <StyleSlideWrapper>
       <Slider {...settings}>
         {imgList.map((ele) => (
           <div key={ele.url}>
@@ -79,9 +66,20 @@ const StyleSlideWrapper = styled.div`
   .slick-slide {
     img {
       object-fit: cover;
-      height: 500px;
+      height: 400px;
       width: 100%;
       box-sizing: border-box;
+    }
+  }
+  .slick-slider {
+    .slick-arrow {
+      display: none;
+    }
+  }
+  .slick-dots {
+    bottom: -3.75rem;
+    li {
+      margin: 0 1.25rem;
     }
   }
 `;
