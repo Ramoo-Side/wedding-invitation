@@ -55,20 +55,21 @@ export const StylePhoto2nd = styled.img`
 `;
 
 export const StyleCallButtonWrapper = styled.div(() => ({
-  padding: 40,
-  marginTop: 20,
+  padding: `2.5rem`,
+  marginTop: `1.25rem`,
 }));
 
 export const StyleCalendarWrapper = styled.div(() => ({
-  margin: '100px auto',
-  // display: 'flex',
+  margin: '6.25rem auto',
+  padding: '2.5rem 0px',
 }));
 
 export const StyleGalleryWrapper = styled.div(() => ({
-  margin: `100px auto`,
+  margin: '6.25rem auto',
+  padding: '2.5rem 0px',
 }));
 
 export const StyleMapWrapper = styled.div(() => ({
-  display: 'flex',
-  justifyContent: 'center',
+  margin: '6.25rem auto',
+  padding: '2.5rem 0px',
 }));
