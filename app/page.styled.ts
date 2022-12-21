@@ -67,3 +67,8 @@ export const StyleCalendarWrapper = styled.div(() => ({
 export const StyleGalleryWrapper = styled.div(() => ({
   margin: `100px auto`,
 }));
+
+export const StyleMapWrapper = styled.div(() => ({
+  display: 'flex',
+  justifyContent: 'center',
+}));

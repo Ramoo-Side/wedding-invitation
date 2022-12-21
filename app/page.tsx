@@ -8,7 +8,7 @@ import Title from '#/components/title/Title';
 import Calendar from '#/components/calendar/Calendar';
 import Gallery from '#/components/gallery/Gallery';
 import useZoomHooks from '#/hooks/useZoomHooks';
-import styled from 'styled-components';
+import KakaoMap from '#/components/maps/KakaoMap';
 import {
   StyleCalendarWrapper,
   StyleCallButtonWrapper,
@@ -16,6 +16,7 @@ import {
   StyleDateWrapper,
   StyleGalleryWrapper,
   StyleGreeting,
+  StyleMapWrapper,
   StylePhoto2nd,
   StylePhoto2ndWrapper,
   StylePhotoWrapper,
@@ -55,6 +56,9 @@ export default function Page() {
           <Gallery />
         </StyleGalleryWrapper>
         {/* <div>오시는길 지도</div> */}
+        <StyleMapWrapper>
+          <KakaoMap />
+        </StyleMapWrapper>
         {/* <div>코로나 인사말</div> */}
         {/* <div>마음 전하실 곳</div> */}
         {/* <div>카카오톡으로 공유하기</div> */}
