@@ -24,8 +24,8 @@ import {
 } from './page.styled';
 
 export default function Page() {
-  const defaultImgUrl = '/couple4.png';
-  const default2ndImgUrl = '/couple7.png';
+  const defaultImgUrl = 'test/couple/couple4.png';
+  const default2ndImgUrl = 'test/couple/couple7.png';
 
   useZoomHooks();
 

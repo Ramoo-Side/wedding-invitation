@@ -6,9 +6,14 @@ import {
   StyleLocation,
   StyleLocationTitle,
   StyleMap,
+  StyleNaviLogo,
+  StyleNaviWrapper,
   StyleTitle,
   StyleTitleWrapper,
 } from './KakaoMap.styled';
+const KAKAO_LOGO = '/kakaonavi-icon.png';
+const NAVER_LOGO = '/navermap-icon.png';
+const TMAP_LOGO = '/tmap-icon.png';
 
 const KakaoMap = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -22,6 +27,20 @@ const KakaoMap = () => {
       </StyleTitleWrapper>
       <KaKaoScripts containerRef={containerRef} />
       <StyleMap id="map" ref={containerRef} />
+      <StyleNaviWrapper>
+        <div>
+          <StyleNaviLogo src={NAVER_LOGO} />
+          <span>네이버 지도</span>
+        </div>
+        <div>
+          <StyleNaviLogo src={KAKAO_LOGO} />
+          <span>카카오 네비</span>
+        </div>
+        <div>
+          <StyleNaviLogo src={TMAP_LOGO} />
+          <span>티맵</span>
+        </div>
+      </StyleNaviWrapper>
     </>
   );
 };

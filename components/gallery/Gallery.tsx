@@ -6,22 +6,22 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const imgList = [
   {
-    url: `brideAndGroom/bride-and-groom1.jpg`,
+    url: `test/brideAndGroom/bride-and-groom1.jpg`,
   },
   {
-    url: `brideAndGroom/bride-and-groom2.jpg`,
+    url: `test/brideAndGroom/bride-and-groom2.jpg`,
   },
   {
-    url: `brideAndGroom/bride-and-groom3.jpg`,
+    url: `test/brideAndGroom/bride-and-groom3.jpg`,
   },
   {
-    url: `brideAndGroom/bride-and-groom4.jpg`,
+    url: `test/brideAndGroom/bride-and-groom4.jpg`,
   },
   {
-    url: `brideAndGroom/bride-and-groom5.jpg`,
+    url: `test/brideAndGroom/bride-and-groom5.jpg`,
   },
   {
-    url: `brideAndGroom/bride-and-groom6.jpg`,
+    url: `test/brideAndGroom/bride-and-groom6.jpg`,
   },
 ];
 
@@ -39,7 +39,7 @@ function Gallery() {
       return (
         <a>
           <img
-            src={`brideAndGroom/bride-and-groom${idx + 1}.jpg`}
+            src={`test/brideAndGroom/bride-and-groom${idx + 1}.jpg`}
             style={{ height: 50, width: 50 }}
           />
         </a>
