@@ -10,11 +10,7 @@ import {
 const Greeting = () => {
   return (
     <>
-      {/* <img src="/flower1.jpg" alt="flower" style={{ height: '3rem' }} /> */}
-      {/* <img src="/flower2.png" alt="flower" style={{ height: '3rem' }} /> */}
-      {/* <img src="/flower3.png" alt="flower" style={{ height: '3rem' }} /> */}
-      {/* <img src="/flower4.png" alt="flower" style={{ height: '3rem' }} /> */}
-      <StyleFlowerImg src="/flower5.png" alt="flower" />
+      <StyleFlowerImg src="test/flower/flower5.png" alt="flower" />
       <StylePoetry>
         두 사람이 꽃과 나무처럼 걸어와서
         <br />
