@@ -8,7 +8,7 @@ import Title from '#/components/title/Title';
 import Calendar from '#/components/calendar/Calendar';
 import Gallery from '#/components/gallery/Gallery';
 import useZoomHooks from '#/hooks/useZoomHooks';
-import KakaoMap from '#/components/maps/KakaoMap';
+import KakaoMap from '#/components/maps/kakaoMap/KakaoMap';
 import {
   StyleCalendarWrapper,
   StyleCallButtonWrapper,
@@ -55,7 +55,6 @@ export default function Page() {
         <StyleGalleryWrapper>
           <Gallery />
         </StyleGalleryWrapper>
-        {/* <div>오시는길 지도</div> */}
         <StyleMapWrapper>
           <KakaoMap />
         </StyleMapWrapper>
