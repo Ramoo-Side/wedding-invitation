@@ -16,6 +16,7 @@ import {
   StylePhoto,
 } from './page.styled';
 import Notice from '#/components/notice/Notice';
+import Account from '#/components/account/Account';
 
 export default function Page() {
   const defaultImgUrl = 'test/couple/couple4.png';
@@ -40,6 +41,7 @@ export default function Page() {
         <KakaoMap />
         <Notice />
         {/* <div>마음 전하실 곳</div> */}
+        <Account />
         {/* <div>카카오톡으로 공유하기</div> */}
       </StyleContentWrapper>
     </>
