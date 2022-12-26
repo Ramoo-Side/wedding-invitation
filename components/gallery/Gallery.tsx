@@ -1,8 +1,8 @@
-import styled from 'styled-components';
 import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { StyleGalleryWrapper, StyleSlideWrapper } from './Gallery.styled';
 
 const imgList = [
   {
@@ -48,38 +48,18 @@ function Gallery() {
   };
 
   return (
-    <StyleSlideWrapper>
-      <Slider {...settings}>
-        {imgList.map((ele) => (
-          <div key={ele.url}>
-            <img src={ele.url} alt="test" />
-          </div>
-        ))}
-      </Slider>
-    </StyleSlideWrapper>
+    <StyleGalleryWrapper>
+      <StyleSlideWrapper>
+        <Slider {...settings}>
+          {imgList.map((ele) => (
+            <div key={ele.url}>
+              <img src={ele.url} alt="test" />
+            </div>
+          ))}
+        </Slider>
+      </StyleSlideWrapper>
+    </StyleGalleryWrapper>
   );
 }
 
 export default Gallery;
-
-const StyleSlideWrapper = styled.div`
-  .slick-slide {
-    img {
-      object-fit: cover;
-      height: 400px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-  }
-  .slick-slider {
-    .slick-arrow {
-      display: none;
-    }
-  }
-  .slick-dots {
-    bottom: -3.75rem;
-    li {
-      margin: 0 1.25rem;
-    }
-  }
-`;

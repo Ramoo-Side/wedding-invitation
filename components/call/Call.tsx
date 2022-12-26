@@ -1,10 +1,12 @@
 import React from 'react';
-import { StyleCallButton } from './Call.styled';
+import { StyleCallButton, StyleCallButtonWrapper } from './Call.styled';
 
 const Call = () => {
   return (
     <>
-      <StyleCallButton>혼주에게 연락하기</StyleCallButton>
+      <StyleCallButtonWrapper>
+        <StyleCallButton>혼주에게 연락하기</StyleCallButton>
+      </StyleCallButtonWrapper>
     </>
   );
 };

@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const StyleCallButtonWrapper = styled.div(() => ({
+  padding: `2.5rem`,
+  marginTop: `1.25rem`,
+}));
+
 export const StyleCallButton = styled.span`
   & {
     position: relative;

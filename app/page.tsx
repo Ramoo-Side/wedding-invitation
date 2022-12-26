@@ -10,18 +10,12 @@ import Gallery from '#/components/gallery/Gallery';
 import useZoomHooks from '#/hooks/useZoomHooks';
 import KakaoMap from '#/components/maps/kakaoMap/KakaoMap';
 import {
-  StyleCalendarWrapper,
-  StyleCallButtonWrapper,
   StyleContentWrapper,
-  StyleDateWrapper,
-  StyleGalleryWrapper,
-  StyleGreeting,
-  StyleMapWrapper,
   StylePhoto2nd,
   StylePhoto2ndWrapper,
-  StylePhotoWrapper,
-  StyleTitleWrapper,
+  StylePhoto,
 } from './page.styled';
+import Notice from '#/components/notice/Notice';
 
 export default function Page() {
   const defaultImgUrl = 'test/couple/couple4.png';
@@ -32,33 +26,19 @@ export default function Page() {
   return (
     <>
       <StyleContentWrapper>
-        <StyleTitleWrapper>
-          <Title names={['김철수', '김영희']} />
-        </StyleTitleWrapper>
-        <StylePhotoWrapper url={defaultImgUrl} />
-        <StyleDateWrapper>
-          <Date />
-        </StyleDateWrapper>
-        <StyleGreeting>
-          <Greeting />
-        </StyleGreeting>
+        <Title names={['김철수', '김영희']} />
+        <StylePhoto url={defaultImgUrl} />
+        <Date />
+        <Greeting />
         <StylePhoto2ndWrapper>
           <StylePhoto2nd src={default2ndImgUrl} alt="2nd img" />
         </StylePhoto2ndWrapper>
         <MemberInfo />
-        <StyleCallButtonWrapper>
-          <Call />
-        </StyleCallButtonWrapper>
-        <StyleCalendarWrapper>
-          <Calendar />
-        </StyleCalendarWrapper>
-        <StyleGalleryWrapper>
-          <Gallery />
-        </StyleGalleryWrapper>
-        <StyleMapWrapper>
-          <KakaoMap />
-        </StyleMapWrapper>
-        {/* <div>코로나 인사말</div> */}
+        <Call />
+        <Calendar />
+        <Gallery />
+        <KakaoMap />
+        <Notice />
         {/* <div>마음 전하실 곳</div> */}
         {/* <div>카카오톡으로 공유하기</div> */}
       </StyleContentWrapper>

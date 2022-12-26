@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const StyleGreeting = styled.div`
+  padding-top: 6.25rem;
+`;
+
 export const StyleFlowerImg = styled.img`
   height: 4.5rem;
 `;

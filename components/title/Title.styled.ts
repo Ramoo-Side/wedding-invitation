@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const StyleTitleWrapper = styled.div`
+  position: relative;
+  z-index: 10;
+  margin: 4.375rem auto 0;
+`;
+
 export const StyleImgWrapper = styled.div`
   position: relative;
   padding-bottom: 5.3125rem;
