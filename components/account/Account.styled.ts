@@ -20,6 +20,10 @@ export const StyleContent = styled.div(() => ({
   fontSize: '1rem',
 }));
 
+export const StyleGroom = styled.div(() => ({
+  marginTop: 8,
+}));
+
 export const StyleGroomWrapper = styled.div(() => ({
   position: 'relative',
   margin: '0 auto',
@@ -28,11 +32,10 @@ export const StyleGroomWrapper = styled.div(() => ({
   color: '#4a3541',
   textAlign: 'center',
   cursor: 'pointer',
-  // zIndex: '999',
 }));
 
-export const StyleGroomAccountWrapper = styled.div(() => ({
-  height: 72,
+export const StyleGroomAccountWrapper = styled.div((props) => ({
+  height: props.$open ? 72 : 0,
   position: 'relative',
   overflow: 'hidden',
   transition: '.5s ease-out',
@@ -47,6 +50,10 @@ export const StyleGroomAccount = styled.div(() => ({
   letterSpacing: '0',
   textAlign: 'left',
   background: 'hsla(0,0%,100%,.75)',
+
+  [`& > span > span`]: {
+    marginRight: 10,
+  },
 }));
 
 export const StyleCopyButton = styled.div(() => ({
