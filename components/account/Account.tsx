@@ -11,6 +11,7 @@ import {
   StyleGroomWrapper,
   StyleTitle,
 } from './Account.styled';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Account = () => {
   const [groomOpen, setGroomOpen] = useState(false);
@@ -40,6 +41,10 @@ const Account = () => {
     },
   ];
 
+  const copyHandle = (text: string, result: boolean) => {
+    if (result) return alert(`계좌번호를 복사했어요. (${text})`);
+  };
+
   return (
     <StyleAccountWrapper>
       <StyleTitle>마음 전하실 곳</StyleTitle>
@@ -58,7 +63,9 @@ const Account = () => {
                 <br />
                 <span>{ele.name}</span>
               </StyleGroomAccount>
-              <StyleCopyButton>복사하기</StyleCopyButton>
+              <CopyToClipboard text={ele.account.split('-').join('')} onCopy={copyHandle}>
+                <StyleCopyButton>복사하기</StyleCopyButton>
+              </CopyToClipboard>
             </StyleGroomAccountWrapper>
           ))}
         </StyleGroom>
@@ -76,7 +83,9 @@ const Account = () => {
                 <br />
                 <span>{ele.name}</span>
               </StyleGroomAccount>
-              <StyleCopyButton>복사하기</StyleCopyButton>
+              <CopyToClipboard text={ele.account.split('-').join('')} onCopy={copyHandle}>
+                <StyleCopyButton>복사하기</StyleCopyButton>
+              </CopyToClipboard>
             </StyleGroomAccountWrapper>
           ))}
         </StyleGroom>
