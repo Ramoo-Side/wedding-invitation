@@ -17,6 +17,7 @@ import {
 } from './page.styled';
 import Notice from '#/components/notice/Notice';
 import Account from '#/components/account/Account';
+import ShareOnKakao from '#/components/shareOnKakao/ShareOnKakao';
 
 export default function Page() {
   const defaultImgUrl = 'test/couple/couple4.png';
@@ -40,10 +41,12 @@ export default function Page() {
         <Gallery />
         <KakaoMap />
         <Notice />
-        {/* <div>마음 전하실 곳</div> */}
         <Account />
         {/* <div>카카오톡으로 공유하기</div> */}
+        <ShareOnKakao />
       </StyleContentWrapper>
     </>
   );
 }
+
+//? 주말엔 배포까지

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
-import KaKaoScripts from '../../scripts/KaKaoScripts';
+import KaKaoMapScripts from '../../scripts/KaKaoMapScripts';
 import { StyleMap, StyleMapWrapper } from './KakaoMap.styled';
 import Location from '../location/Location';
 import Navigation from '../navigation/Navigation';
@@ -14,7 +14,7 @@ const KakaoMap = () => {
     <>
       <StyleMapWrapper>
         <Location />
-        <KaKaoScripts containerRef={containerRef} />
+        <KaKaoMapScripts containerRef={containerRef} />
         <StyleMap id="map" ref={containerRef} />
         <Navigation />
         <WayToCome />

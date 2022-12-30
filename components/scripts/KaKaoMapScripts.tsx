@@ -13,7 +13,7 @@ export interface IProps {
   containerRef: React.RefObject<HTMLDivElement>;
 }
 
-const KaKaoScripts = ({ containerRef }: IProps) => {
+const KaKaoMapScripts = ({ containerRef }: IProps) => {
   const initMap = useCallback(() => {
     if (containerRef?.current) {
       const map = new window.kakao.maps.Map(containerRef.current, {
@@ -44,4 +44,4 @@ const KaKaoScripts = ({ containerRef }: IProps) => {
   );
 };
 
-export default KaKaoScripts;
+export default KaKaoMapScripts;

@@ -12,6 +12,7 @@ import {
   StyleTitle,
 } from './Account.styled';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Swal from 'sweetalert2';
 
 const Account = () => {
   const [groomOpen, setGroomOpen] = useState(false);
@@ -42,7 +43,16 @@ const Account = () => {
   ];
 
   const copyHandle = (text: string, result: boolean) => {
-    if (result) return alert(`계좌번호를 복사했어요. (${text})`);
+    if (result) {
+      Swal.fire({
+        title: `<span style='font-size: 20px'>계좌번호를 복사했습니다</span>`,
+        text,
+        showConfirmButton: false,
+        width: `20rem`,
+        timer: 1000,
+        timerProgressBar: true,
+      });
+    }
   };
 
   return (

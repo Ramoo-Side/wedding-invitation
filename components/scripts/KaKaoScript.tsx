@@ -3,11 +3,12 @@
 import Script from 'next/script';
 import React from 'react';
 
-const KaKaoNaviScript = () => {
+const KaKaoScript = () => {
   const kakaoInit = () => {
     // 페이지가 로드되면 실행
     window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_MAP_API);
-    console.log(window.Kakao.isInitialized());
+    // console.log(window.Kakao.isInitialized());
+    // console.log(window.Kakao);
   };
   return (
     <>
@@ -21,4 +22,4 @@ const KaKaoNaviScript = () => {
   );
 };
 
-export default KaKaoNaviScript;
+export default KaKaoScript;
