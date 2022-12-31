@@ -42,7 +42,6 @@ export default function Page() {
         <KakaoMap />
         <Notice />
         <Account />
-        {/* <div>카카오톡으로 공유하기</div> */}
         <ShareOnKakao />
       </StyleContentWrapper>
     </>
