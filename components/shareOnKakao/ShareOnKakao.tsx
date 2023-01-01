@@ -47,7 +47,10 @@ const ShareOnKakao = () => {
           <StyleKaKaoLogo src="kakaotalk-white-logo.png" />
           <StyleText>카카오톡으로 공유하기</StyleText>
         </StyleKakao>
-        <CopyToClipboard text={`${window.location.href}`} onCopy={copyHandle}>
+        <CopyToClipboard
+          text={`${typeof window !== 'undefined' ? window.location.href : ''}`}
+          onCopy={copyHandle}
+        >
           <StyleLink>
             <StyleCopyLogo src="link.png" />
             <StyleText>청첩장 주소 복사하기</StyleText>
