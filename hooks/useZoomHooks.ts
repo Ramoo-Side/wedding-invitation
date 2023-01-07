@@ -6,7 +6,10 @@ const useZoomHooks = () => {
     const mobileWidth = 720;
     const onResize = () => {
       const zoom = Math.min(window.innerWidth / mobileWidth, 1);
-      document.documentElement.style.zoom = `${zoom}`;
+
+      console.log('zoom: ', zoom);
+      document.documentElement.style.transform = `scale(${zoom})`;
+      // document.documentElement.style.zoom = `${zoom}`;
     };
     onResize();
     window.addEventListener('resize', onResize);
