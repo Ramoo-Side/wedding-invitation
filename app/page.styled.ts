@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
 export const StyleContentWrapper = styled.div`
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 0;
+  margin: auto;
+  background: #fff;
+  line-height: 2rem;
 `;
 
 export const StylePhoto = styled.div`

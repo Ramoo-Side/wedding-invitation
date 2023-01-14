@@ -23,7 +23,7 @@ export default function Page() {
   const defaultImgUrl = 'test/couple/couple4.png';
   const default2ndImgUrl = 'test/couple/couple7.png';
 
-  useZoomHooks();
+  // useZoomHooks();
 
   return (
     <>
