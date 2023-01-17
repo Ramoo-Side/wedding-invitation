@@ -13,7 +13,7 @@ export function useStyledComponentsRegistry() {
     return <>{styles}</>;
   };
 
-  const StyledComponentsRegistry = ({ children }: { children: React.ReactNode }) => {
+  const StyledComponentsRegistry: any = ({ children }: { children: React.ReactNode }) => {
     if (typeof window !== 'undefined') {
       return children;
     }
@@ -23,5 +23,6 @@ export function useStyledComponentsRegistry() {
       </StyleSheetManager>
     );
   };
+
   return [StyledComponentsRegistry, styledComponentsFlushEffect] as const;
 }
