@@ -14,7 +14,6 @@ export const StylePhoto = styled.div`
   height: 28.125rem;
   background-image: url(${(props) => props.url});
   background-size: cover;
-  padding-bottom: 2.5rem;
   position: relative;
   margin-top: -1.5625rem;
 `;

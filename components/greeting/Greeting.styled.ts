@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyleGreeting = styled.div`
+  text-align: center;
   padding-top: 6.25rem;
 `;
 
@@ -9,7 +10,7 @@ export const StyleFlowerImg = styled.img`
 `;
 
 export const StylePoetry = styled.div((props) => ({
-  padding: '3.25rem 6.25rem 6.25rem',
+  padding: '3.25rem 4.25rem 6.25rem',
   whiteSpace: 'pre-wrap',
   lineHeight: '2rem',
   fontSize: '1.125rem',

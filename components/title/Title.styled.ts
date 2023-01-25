@@ -38,6 +38,7 @@ export const StyleName = styled.p`
 `;
 
 export const StyleTitle = styled.div`
+  margin: auto 113px;
   display: inline-block;
   vertical-align: top;
   padding: 2.125rem 1rem 3.125rem;
