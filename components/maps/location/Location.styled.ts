@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyleLocationWrapper = styled.div(() => ({
+  textAlign: 'center',
   marginBottom: `1.25rem`,
 }));
 

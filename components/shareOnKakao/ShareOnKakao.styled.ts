@@ -30,9 +30,12 @@ export const StyleKaKaoLogo = styled.img(() => ({
   height: 30,
 }));
 
-export const StyleCopyLogo = styled.img(() => ({
-  width: 20,
-  height: 20,
+export const StyleCopyLogo = styled.div(() => ({
+  width: '30px',
+  height: '30px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 }));
 
 export const StyleText = styled.span(() => ({

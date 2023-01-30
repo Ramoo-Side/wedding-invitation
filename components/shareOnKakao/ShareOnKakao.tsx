@@ -52,7 +52,9 @@ const ShareOnKakao = () => {
           onCopy={copyHandle}
         >
           <StyleLink>
-            <StyleCopyLogo src="link.png" />
+            <StyleCopyLogo>
+              <img src="link.png" width={20} height={20} />
+            </StyleCopyLogo>
             <StyleText>청첩장 주소 복사하기</StyleText>
           </StyleLink>
         </CopyToClipboard>

@@ -15,6 +15,7 @@ export const StyleTime = styled.div(() => ({
 }));
 
 export const StyleCalendarWrapper = styled.div(() => ({
+  textAlign: 'center',
   margin: '6.25rem auto',
   padding: '2.5rem 0px',
 }));
@@ -23,7 +24,7 @@ export const StyleCalendar = styled(ReactCalendar)`
   &.react-calendar {
     width: 100%;
     border: none;
-    padding: 1.25rem 6.25rem;
+    padding: 1.25rem 1.25rem;
     font-size: 1.5rem;
     pointer-events: none;
     margin-bottom: 20px;
