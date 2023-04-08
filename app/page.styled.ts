@@ -4,8 +4,9 @@ export const StyleContentWrapper = styled.div`
   position: relative;
   width: 100%;
   max-width: 420px;
+  min-width: 420px;
   padding: 0;
-  margin: auto;
+  margin: 0 auto;
   background: #fff;
   line-height: 2rem;
 `;

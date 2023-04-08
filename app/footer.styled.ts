@@ -5,7 +5,9 @@ export const StyleFooter = styled.div(() => ({
   lineHeight: '2rem',
   textAlign: 'center',
   background: '#f1965f12',
-  maxWidth: '720px',
+  // maxWidth: '720px',
+  maxWidth: '420px',
+  minWidth: '420px',
   margin: '0 auto',
 }));
 
