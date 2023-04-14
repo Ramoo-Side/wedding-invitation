@@ -47,5 +47,3 @@ export default function Page() {
     </>
   );
 }
-
-//? 주말엔 배포까지

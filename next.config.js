@@ -6,7 +6,11 @@ const nextConfig = {
     appDir: true,
   },
   compiler: {
-    styledComponents: true,
+    styledComponents: {
+      displayName: true,
+      ssr: true,
+      minify: true,
+    },
   },
 };
 
