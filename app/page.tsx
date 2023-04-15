@@ -18,6 +18,7 @@ import {
 import Notice from '#/components/notice/Notice';
 import Account from '#/components/account/Account';
 import ShareOnKakao from '#/components/shareOnKakao/ShareOnKakao';
+import Foot from './footer';
 
 export default function Page() {
   const defaultImgUrl = 'test/couple/couple4.png';
@@ -43,6 +44,7 @@ export default function Page() {
         <Notice />
         <Account />
         <ShareOnKakao />
+        <Foot />
       </StyleContentWrapper>
     </>
   );
