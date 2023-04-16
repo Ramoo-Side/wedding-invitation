@@ -11,12 +11,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   useEffect(() => {
     setTimeout(() => {
       setRenderCheck(true);
-    }, 2500);
+    }, 2000);
   }, []);
 
   return (
     <html>
-      <body>{renderCheck ? <RootStyleRegistry>{children}</RootStyleRegistry> : <Loading />}</body>
+      <body>
+        {!renderCheck && <Loading />}
+        <div
+          style={{
+            visibility: renderCheck ? 'visible' : 'hidden',
+            position: renderCheck ? 'unset' : 'fixed',
+          }}
+        >
+          <RootStyleRegistry>{children}</RootStyleRegistry>
+        </div>
+        {/* {renderCheck ? <RootStyleRegistry>{children}</RootStyleRegistry> : <Loading />} */}
+      </body>
     </html>
   );
 }
