@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const StyleContentWrapper = styled.div`
   position: relative;
   width: 100%;
-  max-width: 420px;
-  min-width: 420px;
+  max-width: 450px;
+  min-width: 450px;
   padding: 0;
   margin: 0 auto;
   background: #fff;
