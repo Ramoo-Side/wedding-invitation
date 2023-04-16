@@ -9,6 +9,7 @@ export const StyleContentWrapper = styled.div`
   margin: 0 auto;
   background: #fff;
   line-height: 2rem;
+  padding-top: 1px;
 `;
 
 export const StylePhoto = styled.div`
