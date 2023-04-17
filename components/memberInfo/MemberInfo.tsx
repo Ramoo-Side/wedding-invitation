@@ -20,23 +20,23 @@ const MemberInfo = () => {
     <>
       <StyleMemberInfoWrapper>
         <StyleGroomWrapper>
-          <StyleGroomParents>{`${'김철용 • 박덕자'}`}</StyleGroomParents>
+          <StyleGroomParents>{`${'서상진 • 홍순임'}`}</StyleGroomParents>
           <StyleGroomMiddle>
             <span>의</span>
             <StyleGroomMiddleSpan>아들</StyleGroomMiddleSpan>
           </StyleGroomMiddle>
-          <StyleGroomName>{`${'철수'}`}</StyleGroomName>
+          <StyleGroomName>{`${'현우'}`}</StyleGroomName>
           <StyleCallWrapper>
             <StyleCallIcon src="/phone.png" alt="call" />
           </StyleCallWrapper>
         </StyleGroomWrapper>
         <StyleBrideWrapper>
-          <StyleBrideParents>{`${'김덕춘 • 박미숙'}`}</StyleBrideParents>
+          <StyleBrideParents>{`${'고진국 • 유지현'}`}</StyleBrideParents>
           <StyleBrideMiddle>
             <span>의</span>
             <StyleBrideMiddleSpan>딸</StyleBrideMiddleSpan>
           </StyleBrideMiddle>
-          <StyleBrideName>{`${'영희'}`}</StyleBrideName>
+          <StyleBrideName>{`${'아람'}`}</StyleBrideName>
           <StyleCallWrapper>
             <StyleCallIcon src="/phone.png" alt="call" />
           </StyleCallWrapper>

@@ -32,7 +32,7 @@ export default function Page() {
   useEffect(() => {
     async function fetchData() {
       const data = await (await fetch(`http://localhost:3000/api/title`)).json();
-      console.log('data: ', data);
+      // console.log('data: ', data);
       setTitle(data);
     }
     fetchData();
@@ -41,7 +41,7 @@ export default function Page() {
   return (
     <>
       <StyleContentWrapper>
-        <Title names={title} />
+        <Title names={{ groom: '서현우', bride: '고아람' }} />
         <StylePhoto url={defaultImgUrl} />
         <Date />
         <Greeting />

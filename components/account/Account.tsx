@@ -19,24 +19,24 @@ const Account = () => {
   const [brideOpen, setBrideOpen] = useState(false);
   const 신랑계좌 = [
     {
-      name: '김철용',
+      name: '서상진',
       bank: '국민',
       account: '123456-78-123456',
     },
     {
-      name: '김철수',
+      name: '서현우',
       bank: '카카오뱅크',
       account: '3333-03-1234567',
     },
   ];
   const 신부계좌 = [
     {
-      name: '김영숙',
+      name: '고진국',
       bank: '국민',
       account: '123456-78-456789',
     },
     {
-      name: '김영희',
+      name: '고아람',
       bank: '카카오뱅크',
       account: '3333-03-4567890',
     },
