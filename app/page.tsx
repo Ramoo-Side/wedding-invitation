@@ -18,15 +18,30 @@ import Notice from '#/components/notice/Notice';
 import Account from '#/components/account/Account';
 import ShareOnKakao from '#/components/shareOnKakao/ShareOnKakao';
 import Foot from './footer';
+import { useEffect, useState } from 'react';
+
+const defaultImgUrl = 'test/couple/couple4.png';
+const default2ndImgUrl = 'test/couple/couple7.png';
 
 export default function Page() {
-  const defaultImgUrl = 'test/couple/couple4.png';
-  const default2ndImgUrl = 'test/couple/couple7.png';
+  const [title, setTitle] = useState({
+    groom: '',
+    bride: '',
+  });
+
+  useEffect(() => {
+    async function fetchData() {
+      const data = await (await fetch(`http://localhost:3000/api/title`)).json();
+      console.log('data: ', data);
+      setTitle(data);
+    }
+    fetchData();
+  }, []);
 
   return (
     <>
       <StyleContentWrapper>
-        <Title names={['김철수', '김영희']} />
+        <Title names={title} />
         <StylePhoto url={defaultImgUrl} />
         <Date />
         <Greeting />

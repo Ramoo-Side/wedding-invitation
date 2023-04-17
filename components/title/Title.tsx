@@ -1,11 +1,14 @@
 import { StyleImgWrapper, StyleName, StyleTitle, StyleTitleWrapper } from './Title.styled';
 
 interface TitleProps {
-  names: string[];
+  names: {
+    groom: string;
+    bride: string;
+  };
 }
-
+const defaultTitleUrl = '/Record-to-Moment.png';
 const Title = ({ names }: TitleProps) => {
-  const defaultTitleUrl = '/Record-to-Moment.png';
+  const { groom, bride } = names;
   return (
     <>
       <StyleTitleWrapper>
@@ -14,8 +17,8 @@ const Title = ({ names }: TitleProps) => {
             <img src={defaultTitleUrl} alt="record to moment" />
           </StyleImgWrapper>
           <StyleName>
-            <span>{names[0]}</span>
-            <span>{names[1]}</span>
+            <span>{groom}</span>
+            <span>{bride}</span>
           </StyleName>
         </StyleTitle>
       </StyleTitleWrapper>
