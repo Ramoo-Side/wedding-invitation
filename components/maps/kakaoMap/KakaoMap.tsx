@@ -7,16 +7,25 @@ import Location from '../location/Location';
 import Navigation from '../navigation/Navigation';
 import WayToCome from '../wayToCome/WayToCome';
 
-const KakaoMap = () => {
+export interface IProps {
+  locationInfo: {
+    title: string;
+    detail: string;
+    coord: number[];
+    appURL: string;
+  };
+}
+
+const KakaoMap = ({ locationInfo }: IProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
       <StyleMapWrapper>
-        <Location />
+        <Location locationInfo={locationInfo} />
         <KaKaoMapScripts containerRef={containerRef} />
         <StyleMap id="map" ref={containerRef} />
-        <Navigation />
+        <Navigation locationInfo={locationInfo} />
         <WayToCome />
       </StyleMapWrapper>
     </>

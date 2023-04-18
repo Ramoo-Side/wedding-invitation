@@ -14,31 +14,48 @@ import {
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Swal from 'sweetalert2';
 
-const Account = () => {
+export interface IProps {
+  accountInfo: {
+    groomParentName: string;
+    groomParentBank: string;
+    groomParentAccount: string;
+    groomName: string;
+    groomBank: string;
+    groomAccount: string;
+    brideParentName: string;
+    brideParentBank: string;
+    brideParentAccount: string;
+    brideName: string;
+    brideBank: string;
+    brideAccount: string;
+  };
+}
+
+const Account = ({ accountInfo }: IProps) => {
   const [groomOpen, setGroomOpen] = useState(false);
   const [brideOpen, setBrideOpen] = useState(false);
   const 신랑계좌 = [
     {
-      name: '서상진',
-      bank: '국민',
-      account: '123456-78-123456',
+      name: accountInfo.groomParentName,
+      bank: accountInfo.groomParentBank,
+      account: accountInfo.groomParentAccount,
     },
     {
-      name: '서현우',
-      bank: '카카오뱅크',
-      account: '3333-03-1234567',
+      name: accountInfo.groomName,
+      bank: accountInfo.groomBank,
+      account: accountInfo.groomAccount,
     },
   ];
   const 신부계좌 = [
     {
-      name: '고진국',
-      bank: '국민',
-      account: '123456-78-456789',
+      name: accountInfo.brideParentName,
+      bank: accountInfo.brideParentBank,
+      account: accountInfo.brideParentAccount,
     },
     {
-      name: '고아람',
-      bank: '카카오뱅크',
-      account: '3333-03-4567890',
+      name: accountInfo.brideName,
+      bank: accountInfo.brideBank,
+      account: accountInfo.brideAccount,
     },
   ];
 
@@ -64,7 +81,7 @@ const Account = () => {
             신랑측 계좌번호
           </StyleGroomWrapper>
           {신랑계좌.map((ele) => (
-            <StyleGroomAccountWrapper key={ele.account} $open={groomOpen}>
+            <StyleGroomAccountWrapper key={`${ele.name}_${ele.account}`} $open={groomOpen}>
               <StyleGroomAccount>
                 <span>
                   <span>{ele.bank}</span>
@@ -84,7 +101,7 @@ const Account = () => {
             신부측 계좌번호
           </StyleGroomWrapper>
           {신부계좌.map((ele) => (
-            <StyleGroomAccountWrapper key={ele.account} $open={brideOpen}>
+            <StyleGroomAccountWrapper key={`${ele.name}_${ele.account}`} $open={brideOpen}>
               <StyleGroomAccount>
                 <span>
                   <span>{ele.bank}</span>

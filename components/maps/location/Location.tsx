@@ -1,4 +1,5 @@
 import React from 'react';
+import { IProps } from '../kakaoMap/KakaoMap';
 import {
   StyleLocation,
   StyleLocationTitle,
@@ -6,13 +7,13 @@ import {
   StyleLocationWrapper,
 } from './Location.styled';
 
-const Location = () => {
+const Location = ({ locationInfo }: IProps) => {
   return (
     <>
       <StyleLocationWrapper>
         <StyleTitle>오시는길</StyleTitle>
-        <StyleLocationTitle>팜파스 13</StyleLocationTitle>
-        <StyleLocation>울산광역시 북구 명촌23길 44 1~4층</StyleLocation>
+        <StyleLocationTitle>{locationInfo.title}</StyleLocationTitle>
+        <StyleLocation>{locationInfo.detail}</StyleLocation>
       </StyleLocationWrapper>
     </>
   );

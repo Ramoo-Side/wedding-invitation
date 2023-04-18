@@ -42,23 +42,70 @@ export default function Page() {
   return (
     <>
       <StyleContentWrapper>
-        <Title names={{ groom: '서현우', bride: '고아람' }} />
+        <Title names={dataObj.titleName} />
         <StylePhoto url={defaultImgUrl} />
         <Date />
         <Greeting />
         <StylePhoto2ndWrapper>
           <StylePhoto2nd src={default2ndImgUrl} alt="2nd img" width={350} height={216} />
         </StylePhoto2ndWrapper>
-        <MemberInfo />
+        <MemberInfo memberInfo={dataObj.memberInfo} />
         <Call />
-        <Calendar />
+        <Calendar calenderInfo={dataObj.calenderInfo} />
         <Gallery />
-        <KakaoMap />
+        <KakaoMap locationInfo={dataObj.locationInfo} />
         <Notice />
-        <Account />
-        <ShareOnKakao />
+        <Account accountInfo={dataObj.accountInfo} />
+        <ShareOnKakao shareInfo={dataObj.shareInfo} />
         <Foot />
       </StyleContentWrapper>
     </>
   );
 }
+
+const dataObj = {
+  titleName: {
+    groom: '서현우',
+    bride: '고아람',
+  },
+  memberInfo: {
+    groomParent: '서상진 • 홍순임',
+    groomName: '현우',
+    groomPhone: '01012345678',
+    brideParent: '고진국 • 유지현',
+    brideName: '아람',
+    bridePhone: '01012345678',
+  },
+  calenderInfo: {
+    year: 2022,
+    month: 4,
+    day: 9,
+    time: 18,
+  },
+  locationInfo: {
+    title: '팜파스 13',
+    detail: '울산광역시 북구 명촌23길 44 1~4층',
+    coord: [129.35525736980682, 35.557144505209039],
+    appURL: `https://wedding-invitation-dun.vercel.app/`,
+  },
+  accountInfo: {
+    groomParentName: '서상진',
+    groomParentBank: '국민',
+    groomParentAccount: '123456-78-123456',
+    groomName: '서현우',
+    groomBank: '카카오뱅크',
+    groomAccount: '3333-03-1234567',
+    brideParentName: '고진국',
+    brideParentBank: '국민',
+    brideParentAccount: '123456-78-123456',
+    brideName: '고아람',
+    brideBank: '카카오뱅크',
+    brideAccount: '3333-03-1234567',
+  },
+  shareInfo: {
+    title: '결혼식에 초대합니다',
+    description: '현우 ❤ 아람',
+    imageUrl: 'https://ifh.cc/g/9jWMKr.png',
+    link: `https://wedding-invitation-dun.vercel.app/`,
+  },
+};

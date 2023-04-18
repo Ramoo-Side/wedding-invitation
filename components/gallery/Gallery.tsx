@@ -6,22 +6,22 @@ import { StyleGalleryWrapper, StyleSlideWrapper } from './Gallery.styled';
 
 const imgList = [
   {
-    url: `test/brideAndGroom/bride-and-groom1.jpg`,
+    url: `https://picsum.photos/500/500?random=1`,
   },
   {
-    url: `test/brideAndGroom/bride-and-groom2.jpg`,
+    url: `https://picsum.photos/500/500?random=2`,
   },
   {
-    url: `test/brideAndGroom/bride-and-groom3.jpg`,
+    url: `https://picsum.photos/500/500?random=3`,
   },
   {
-    url: `test/brideAndGroom/bride-and-groom4.jpg`,
+    url: `https://picsum.photos/500/500?random=4`,
   },
   {
-    url: `test/brideAndGroom/bride-and-groom5.jpg`,
+    url: `https://picsum.photos/500/500?random=5`,
   },
   {
-    url: `test/brideAndGroom/bride-and-groom6.jpg`,
+    url: `https://picsum.photos/500/500?random=6`,
   },
 ];
 
@@ -39,7 +39,7 @@ function Gallery() {
       return (
         <a>
           <img
-            src={`test/brideAndGroom/bride-and-groom${idx + 1}.jpg`}
+            src={`https://picsum.photos/500/500?random=${idx + 1}`}
             style={{ height: 50, width: 50 }}
           />
         </a>

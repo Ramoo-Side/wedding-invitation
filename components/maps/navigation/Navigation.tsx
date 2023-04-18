@@ -1,4 +1,5 @@
 import React from 'react';
+import { IProps } from '../kakaoMap/KakaoMap';
 import {
   StyleKakaoWrapper,
   StyleNaverWrapper,
@@ -10,12 +11,12 @@ const KAKAO_LOGO = '/kakaonavi-icon.png';
 const NAVER_LOGO = '/navermap-icon.png';
 const TMAP_LOGO = '/tmap-icon.png';
 
-const Navigation = () => {
+const Navigation = ({ locationInfo }: IProps) => {
   const kakaoNavigation = () => {
     window.Kakao.Navi.start({
-      name: '팜파스13',
-      x: 129.35525736980682,
-      y: 35.557144505209039,
+      name: locationInfo.title,
+      x: locationInfo.coord[0],
+      y: locationInfo.coord[1],
       coordType: 'wgs84',
     });
   };
@@ -25,8 +26,9 @@ const Navigation = () => {
       <StyleNaviWrapper>
         <StyleNaverWrapper>
           <a
-            href={`nmap://search?query=${encodeURIComponent('팜파스13')}&amp;appname=${'url 위치'}`}
-            // href={`https://map.naver.com/v5/search/%ED%8C%9C%ED%8C%8C%EC%8A%A413/place/1494596721?c=14399727.0172462,4239848.5746307,19.39,0,0,0,dh&isCorrectAnswer=true`}
+            href={`nmap://search?query=${encodeURIComponent(locationInfo.title)}&amp;appname=${
+              locationInfo.appURL
+            }`}
           >
             <StyleNaviLogo src={NAVER_LOGO} />
             <span>네이버 지도</span>
@@ -39,7 +41,7 @@ const Navigation = () => {
           </a>
         </StyleKakaoWrapper>
         <StyleTmapWrapper>
-          <a href="tmap://search?name=팜파스13">
+          <a href={`tmap://search?name=${locationInfo.title}`}>
             <StyleNaviLogo src={TMAP_LOGO} />
             <span>티맵</span>
           </a>

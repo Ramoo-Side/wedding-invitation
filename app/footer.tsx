@@ -16,7 +16,9 @@ export default function Foot() {
 
   return (
     <>
-      <StyleFooter onClick={() => setClickCount((preCount) => preCount + 1)}>
+      <StyleFooter
+      // onClick={() => setClickCount((preCount) => preCount + 1)}
+      >
         <StyleCopyright>Copyright 2023. Wedding-Invitation. All rights reserved.</StyleCopyright>
       </StyleFooter>
     </>

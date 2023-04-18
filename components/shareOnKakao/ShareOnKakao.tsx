@@ -10,17 +10,26 @@ import {
   StyleText,
 } from './ShareOnKakao.styled';
 
-const ShareOnKakao = () => {
+export interface IProps {
+  shareInfo: {
+    title: string;
+    description: string;
+    imageUrl: string;
+    link: string;
+  };
+}
+
+const ShareOnKakao = ({ shareInfo }: IProps) => {
   const shareOnKakaoFunc = () => {
     const options = {
       objectType: 'feed',
       content: {
-        title: '결혼식에 초대합니다',
-        description: '철수 ❤ 영희',
-        imageUrl: 'https://ifh.cc/g/9jWMKr.png',
+        title: shareInfo.title,
+        description: shareInfo.description,
+        imageUrl: shareInfo.imageUrl,
         link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-          webUrl: 'https://developers.kakao.com',
+          mobileWebUrl: shareInfo.link,
+          webUrl: shareInfo.link,
         },
       },
     };
