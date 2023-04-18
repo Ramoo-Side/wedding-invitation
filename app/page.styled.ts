@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 
 export const StyleContentWrapper = styled.div`
@@ -28,7 +29,7 @@ export const StylePhoto2ndWrapper = styled.div`
   justify-content: center;
 `;
 
-export const StylePhoto2nd = styled.img`
-  width: 18.75rem;
+export const StylePhoto2nd = styled(Image)`
+  width: 21.75rem;
   padding-bottom: 2.5rem;
 `;

@@ -21,7 +21,8 @@ import Foot from './footer';
 import { useEffect, useState } from 'react';
 
 const defaultImgUrl = 'test/couple/couple4.png';
-const default2ndImgUrl = 'test/couple/couple7.png';
+const default2ndImgUrl = '/test/test-picture.jpg';
+// const default2ndImgUrl = 'test/couple/couple7.png';
 
 export default function Page() {
   const [title, setTitle] = useState({
@@ -46,7 +47,7 @@ export default function Page() {
         <Date />
         <Greeting />
         <StylePhoto2ndWrapper>
-          <StylePhoto2nd src={default2ndImgUrl} alt="2nd img" />
+          <StylePhoto2nd src={default2ndImgUrl} alt="2nd img" width={350} height={216} />
         </StylePhoto2ndWrapper>
         <MemberInfo />
         <Call />
