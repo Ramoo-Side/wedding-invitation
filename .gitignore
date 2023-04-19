@@ -38,4 +38,4 @@ next-env.d.ts
 .vscode
 .env
 
-/public/test/test-picture.jpg
+# /public/test/test-picture.jpg

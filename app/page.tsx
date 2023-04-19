@@ -86,7 +86,7 @@ const dataObj = {
     title: '팜파스 13',
     detail: '울산광역시 북구 명촌23길 44 1~4층',
     coord: [129.35525736980682, 35.557144505209039],
-    appURL: `https://wedding-invitation-dun.vercel.app/`,
+    appURL: `https://wedding-invitation-ramoo-side.vercel.app/`,
   },
   accountInfo: {
     groomParentName: '서상진',
@@ -106,6 +106,6 @@ const dataObj = {
     title: '결혼식에 초대합니다',
     description: '현우 ❤ 아람',
     imageUrl: 'https://ifh.cc/g/9jWMKr.png',
-    link: `https://wedding-invitation-dun.vercel.app/`,
+    link: `https://wedding-invitation-ramoo-side.vercel.app/`,
   },
 };
