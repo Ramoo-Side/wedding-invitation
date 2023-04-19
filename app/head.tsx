@@ -9,8 +9,9 @@ declare global {
 export default function Head() {
   return (
     <>
-      <title>Wedding-Invitation</title>
+      <title>초대합니다 ❤</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/married.png" />
       <KaKaoScript />
     </>
   );
