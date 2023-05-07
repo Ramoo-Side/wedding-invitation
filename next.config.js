@@ -12,6 +12,14 @@ const nextConfig = {
       minify: true,
     },
   },
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: 'https://api.notion.com/v1/databases/:path*',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

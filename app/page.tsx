@@ -18,11 +18,12 @@ import Notice from '#/components/notice/Notice';
 import Account from '#/components/account/Account';
 import ShareOnKakao from '#/components/shareOnKakao/ShareOnKakao';
 import Foot from './footer';
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
+import { DATABASE_ID, TOKEN } from '#/config';
 
 const defaultImgUrl = 'test/couple/couple4.png';
 const default2ndImgUrl = '/test/test-picture.jpg';
-// const default2ndImgUrl = 'test/couple/couple7.png';
+// const default2ndImgUrl = '/test/couple/couple7.png';
 
 export default function Page() {
   const [title, setTitle] = useState({
@@ -30,14 +31,9 @@ export default function Page() {
     bride: '',
   });
 
-  useEffect(() => {
-    async function fetchData() {
-      const data = await (await fetch(`http://localhost:3000/api/title`)).json();
-      // console.log('data: ', data);
-      setTitle(data);
-    }
-    fetchData();
-  }, []);
+  const resultData = fetchData();
+
+  // console.log(resultData);
 
   return (
     <>
@@ -61,6 +57,26 @@ export default function Page() {
       </StyleContentWrapper>
     </>
   );
+}
+
+export async function fetchData() {
+  const res = await (
+    await fetch(`https://api.notion.com/v1/databases/${DATABASE_ID}/query`, {
+      cache: 'no-store',
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Notion-Version': '2022-06-28',
+        Authorization: `Bearer ${TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+      // body: JSON.stringify({}),
+    })
+  ).json();
+
+  console.log('결괏값: ', res.results);
+
+  return res.results;
 }
 
 const dataObj = {
