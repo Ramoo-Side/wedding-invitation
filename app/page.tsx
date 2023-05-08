@@ -19,21 +19,14 @@ import Account from '#/components/account/Account';
 import ShareOnKakao from '#/components/shareOnKakao/ShareOnKakao';
 import Foot from './footer';
 import { use, useEffect, useState } from 'react';
-import { DATABASE_ID, TOKEN } from '#/config';
 
 const defaultImgUrl = 'test/couple/couple4.png';
 const default2ndImgUrl = '/test/test-picture.jpg';
 // const default2ndImgUrl = '/test/couple/couple7.png';
 
 export default function Page() {
-  const [title, setTitle] = useState({
-    groom: '',
-    bride: '',
-  });
-
-  const resultData = fetchData();
-
-  // console.log(resultData);
+  const resultData = use(fetchData());
+  console.log(resultData);
 
   return (
     <>
@@ -60,23 +53,13 @@ export default function Page() {
 }
 
 export async function fetchData() {
-  const res = await (
-    await fetch(`https://api.notion.com/v1/databases/${DATABASE_ID}/query`, {
-      cache: 'no-store',
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Notion-Version': '2022-06-28',
-        Authorization: `Bearer ${TOKEN}`,
-        'Content-Type': 'application/json',
-      },
-      // body: JSON.stringify({}),
-    })
-  ).json();
+  const res = await fetch(`http://localhost:3000/api/gallery`, {
+    method: 'POST',
+  });
 
-  console.log('결괏값: ', res.results);
+  const result = await res.json();
 
-  return res.results;
+  return result.data;
 }
 
 const dataObj = {
