@@ -12,13 +12,8 @@ const nextConfig = {
       minify: true,
     },
   },
-  async rewrites() {
-    return [
-      {
-        source: '/:path*',
-        destination: 'https://api.notion.com/v1/databases/:path*',
-      },
-    ];
+  images: {
+    domains: ['s3.us-west-2.amazonaws.com', 'secure.notion-static.com'],
   },
 };
 

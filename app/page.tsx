@@ -21,12 +21,16 @@ import Foot from './footer';
 import { use, useEffect, useState } from 'react';
 
 const defaultImgUrl = 'test/couple/couple4.png';
-const default2ndImgUrl = '/test/test-picture.jpg';
-// const default2ndImgUrl = '/test/couple/couple7.png';
 
 export default function Page() {
   const resultData = use(fetchData());
-  console.log(resultData);
+  // console.log(resultData);
+
+  const notion2ndImgUrl = resultData.results.find(
+    (result: { properties: { title: { title: { plain_text: string }[] } } }) =>
+      result.properties?.title?.title[0].plain_text === '커플사진'
+  )?.properties.image.files[0].file.url;
+  // console.log(notion2ndImgUrl);
 
   return (
     <>
@@ -36,7 +40,7 @@ export default function Page() {
         <Date />
         <Greeting />
         <StylePhoto2ndWrapper>
-          <StylePhoto2nd src={default2ndImgUrl} alt="2nd img" width={350} height={216} />
+          <StylePhoto2nd src={notion2ndImgUrl} alt="2nd img" width={350} height={216} />
         </StylePhoto2ndWrapper>
         <MemberInfo memberInfo={dataObj.memberInfo} />
         <Call />
