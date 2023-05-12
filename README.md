@@ -30,7 +30,9 @@
    ex) http://localhost:3000
    ```
 
-4. `page.tsx` 하단에 있는 `dataObj` 를 수정하거나, 직접 DB 연동 후 api 생성하여 사용하기
+4. ~~`page.tsx` 하단에 있는 `dataObj` 를 수정하거나, 직접 DB 연동 후 api 생성하여 사용하기~~ `dataObj` 를 수정하거나, notion api 를 사용해서 연동하기
+
+5. vercel 로 build 할 경우, env 에 들어간 key 값을 setting -> environment-variables 에서 넣어주기
 
 ## Comment
 
