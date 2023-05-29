@@ -22,6 +22,8 @@
 
    ```
    NEXT_PUBLIC_KAKAO_MAP_API = kakao developers 에서 받은 app key(JavaScript key)
+   NEXT_PUBLIC_NOTION_TOKEN = Notion API 생성 시 나오는 token
+   NEXT_PUBLIC_NOTION_DATABASE_ID = Notion API 사용 시 해당 데이터페이스 아이디(전체페이지보기 url 정보)
    ```
 
 3. Kakao developers => 플랫폼 => Web 사이트 도메인 추가하기
